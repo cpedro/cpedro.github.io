@@ -1,5 +1,7 @@
-locale: "en-GB"
-title: "Chris Pedro"
-title_seperator: "-"
-name: &name "Chris Pedro"
-url: "https://chris.thepedros.com/"
+# Main site settings
+locale          : "en-GB"
+title           : "Chris Pedro"
+title_seperator : "-"
+name            : &name "Chris Pedro"
+url             : https://chris.thepedros.com
+repository      : "cpedro/cpedro.github.io"
