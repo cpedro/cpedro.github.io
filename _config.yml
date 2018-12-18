@@ -5,10 +5,15 @@ plugins:
   - jekyll-seo-tag
 
 # Main site settings
-lang            : "en-GB"
+locale          : "en-GB"
 title           : "Chris Pedro"
 title_seperator : "-"
+description     : "-Just a guy from Bermuda"
 name            : &name "Chris Pedro"
 url             : https://chris.thepedros.com
 repository      : "cpedro/cpedro.github.io"
 google_analytics: "UA-131160048-1"
+
+author:
+  name    : "Chris Pedro"
+  location: "Bermuda"
