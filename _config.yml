@@ -1,5 +1,8 @@
 
-theme: jekyll-theme-tactile
+markdown: kramdown
+theme: jekyll-theme-hacker
+plugins:
+  - jekyll-seo-tag
 
 # Main site settings
 locale          : "en-GB"
