@@ -5,9 +5,10 @@ plugins:
   - jekyll-seo-tag
 
 # Main site settings
-locale          : "en-GB"
+lang            : "en-GB"
 title           : "Chris Pedro"
 title_seperator : "-"
 name            : &name "Chris Pedro"
 url             : https://chris.thepedros.com
 repository      : "cpedro/cpedro.github.io"
+google_analytics: "UA-131160048-1"
