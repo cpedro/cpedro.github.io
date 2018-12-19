@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-
-{% seo %}
+    <link rel="stylesheet" href="https://d1azc1qln24ryf.cloudfront.net/114779/Socicon/style-cf.css?9ukd8d">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    {% seo %}
   </head>
 
   <body>
-
     <header>
       <div class="container">
         <h1>{{ site.title | default: site.github.repository_name }}</h1>
@@ -28,16 +28,18 @@
     <footer>
       <p>
         &copy;
-        {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}. 
-        {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} 
-        <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>
-        <a href="https://github.com/pages-themes/hacker" rel="nofollow">Hacker</a> &amp;
-        <a href="https://pages.github.com/" rel="nofollow">GitHub Pages</a>.
+        {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.
       </p>
       <p>
-        <a href="{{ site.github.repository_url }}" class="btn btn-github">
-          <span class="icon"></span>View Source
-        </a>
+        {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }} 
+        <a href="http://jekyllrb.com" target="_blank" rel="nofollow">Jekyll</a>
+        <a href="https://github.com/pages-themes/hacker" target="_blank" rel="nofollow">Hacker</a> &amp;
+        <a href="https://pages.github.com/" target="_blank" rel="nofollow">GitHub Pages</a>.
+      </p>
+      </p>
+      <p>
+        Social icons by
+        <a href="http://www.socicon.com" target="_blank" rel="nofollow">socicon</a>.
       </p>
       {% if site.google_analytics %}
         <!-- Global site tag (gtag.js) - Google Analytics -->

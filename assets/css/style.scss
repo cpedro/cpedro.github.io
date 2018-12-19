@@ -12,6 +12,38 @@ header h1:before {
 }
 
 footer {
+  font-size: 10px;
   text-align: right;
   border-top: 1px dashed $conifer;
+}
+
+.button-socicon {
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  vertical-align: middle;
+  margin-right: 0.3em;
+}
+
+.button-twitter {
+  background-color: #4da7de !important;
+}
+
+.button-instagram {
+  background-color: #bc2a8d !important;
+}
+
+.button-twitch {
+  background-color: #6441a5 !important;
+}
+
+.button-github {
 }
