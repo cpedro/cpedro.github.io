@@ -13,7 +13,7 @@ below.
 
 <a href="http://twitter.com/Aner_san" 
   class="pure-button button-twitter button-socicon">
-  <span class="socicon socicon-twitter"></span> @Aner_san
+  <span class="socicon socicon-twitter"></span> Aner&#95;san
 </a>
 <a href="https://www.instagram.com/anersan/" 
   class="pure-button button-instagram button-socicon">
@@ -21,7 +21,7 @@ below.
 </a>
 <a href="https://www.twitch.tv/aner_bda" 
   class="pure-button button-twitch button-socicon">
-  <span class="socicon socicon-twitch"></span> Aner_BDA
+  <span class="socicon socicon-twitch"></span> Aner&#95;BDA
 </a>
 <a href="https://github.com/cpedro" 
   class="pure-button button-github button-socicon">

@@ -18,19 +18,24 @@ footer {
 }
 
 .button-socicon {
-  speak: none;
+  width: 150px;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  border-radius: 15px !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2) !important;
+
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
 
   vertical-align: middle;
   margin-right: 0.3em;
+
+  color: #eaeaea !important;
 }
 
 .button-twitter {
@@ -46,4 +51,6 @@ footer {
 }
 
 .button-github {
+  color: #24292e !important;
+  background-color: #eaeaea !important;
 }
