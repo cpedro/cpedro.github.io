@@ -1,6 +1,6 @@
 
 markdown: kramdown
-theme: jekyll-theme-hacker
+theme: jekyll-theme-tactile
 plugins:
   - jekyll-seo-tag
 
@@ -8,7 +8,7 @@ plugins:
 locale          : "en-GB"
 title           : "Chris Pedro"
 title_seperator : "-"
-description     : "-Just a guy from Bermuda"
+description     : "Just a guy from Bermuda"
 name            : &name "Chris Pedro"
 url             : https://chris.thepedros.com
 repository      : "cpedro/cpedro.github.io"
