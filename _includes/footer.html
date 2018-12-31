@@ -1,0 +1,12 @@
+{% include base_path %}
+<p>
+  &copy;
+  {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}.
+  {{ site.data.ui-text[site.locale].powered_by | default: "Powered by" }}
+  <a href="http://jekyllrb.com" target="_blank" rel="nofollow">Jekyll</a>,
+  <a href="https://github.com/pages-themes/tactile" target="_blank" rel="nofollow">Tactile</a> &amp;
+  <a href="https://pages.github.com/" target="_blank" rel="nofollow">GitHub Pages</a>.
+  Icons by
+  <a href="http://www.socicon.com" target="_blank" rel="nofollow">socicon</a>.
+</p>
+

@@ -1,0 +1,11 @@
+{% include base_path %}
+{% if site.social %}
+  <div class="right-align">
+    {% for link in site.social.links %}
+      <a class="button-socicon" href="{{ link.url }}" title="{{ link.title }}">
+        <span class="{{ link.icon }}"></span>
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}
+
