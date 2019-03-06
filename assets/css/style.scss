@@ -26,3 +26,18 @@ div.right-align {
   color: #6d6d6d;
   text-decoration: none !important;
 }
+
+ul.pl {
+  white-space: nowrap;
+}
+
+li.pl_item {
+  list-style: none;
+  overflow: hidden;
+  display: inline-block;
+}
+
+a.pl_link {
+  color: #6d6d6d;
+  text-decoration: none !important;
+}
