@@ -18,6 +18,9 @@ author:
   name    : "Chris Pedro"
   location: "Bermuda"
 
+# Date format: See http://strftime.net/
+date_format: "%Y-%m-%d"
+
 # Social links, will appear in order listed.
 social:
   links:

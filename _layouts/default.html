@@ -16,6 +16,9 @@
           {% include page_links.html %}
         </section>
         <section id="main_content">
+          {% if page.title %}
+            <h2>{{page.title}}</h2>
+          {% endif %}
           {{ content }}
         </section>
         <section id="social_links">
