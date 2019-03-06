@@ -1,5 +1,5 @@
 ---
-title: "Posts"
+title: "Blog"
 layout: default
 permalink: /posts
 redirect_from:
