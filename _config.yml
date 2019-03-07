@@ -21,6 +21,11 @@ author:
 # Date format: See http://strftime.net/
 date_format: "%Y-%m-%d"
 
+collections:
+  tech:
+    output: true
+    permalink: /:collection/:path/
+
 # Social links, will appear in order listed.
 social:
   links:
@@ -42,4 +47,3 @@ social:
     - title: "GitHub"
       url: "https://github.com/cpedro"
       icon: "socicon-github"
-
