@@ -14,7 +14,7 @@ cause you to lose data or make your computer unbootable. So please make sure
 you're running the commands with the right disk numbers, and always **backup
 your data**.
 
-1. Download the ISO file.
+1. Download the ISO file, and open up your favourite Terminal application.
 1. Connect the USB stick you wish copy to. You don't need to pre-format this
 disk at all.  In fact, formatting it will be a waste of time.
 1. Convert the .iso to an .img file.  This is listed as a step on many sites,
