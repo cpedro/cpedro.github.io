@@ -20,12 +20,12 @@ disk at all.  In fact, formatting it will be a waste of time.
 1. Convert the .iso to an .img file.  This is listed as a step on many sites,
 but I can't tell if actually does anything.  Replace `~/Downloads/...` with the
 path to where you downloaded the ISO to.
-    ```BASH
+    ```
     $ hdiutil convert -format UDRW -o target.img ~/Downloads/file.iso
     ```
 1. macOS will put `.dmg` extension on the end of the file (`target.img.dmg`).
 You can strip this off.
-    ```BASH
+    ```
     $ mv target.img{.dmg,}
     ```
 1. Run the below command to get a list of connected disks.  Make note of which
@@ -38,7 +38,7 @@ plugged into the Mac, they will also say the same thing, so **be careful**.
 You don't want to wipe the wrong drive.  As an example, here's the command run
 on my machine, and `/dev/disk3` is an 8GB USB stick I have plugged in.  Disks
 0, 1 & 2 are my internal Fusion drive.
-    ```BASH
+    ```
     $ diskutil list
     /dev/disk0 (internal, physical):
        #:                       TYPE NAME                    SIZE       IDENTIFIER
@@ -69,14 +69,14 @@ on my machine, and `/dev/disk3` is an 8GB USB stick I have plugged in.  Disks
     ```
 1. Run the below to unmount the disk.  Replace `N` with the disk number of the
 USB stick.
-    ```BASH
+    ```
     $ diskutil unmountDisk /dev/diskN
     ```
 1. The next command will erase the USB stick and replace its contents with the
 downloaded ISO file.  Make sure you do this on the right disk, or you **risk
 wiping the wrong device**.  Again, replace `N` with your disk number.  You'll be
 prompted for a password, just enter the password you use to log onto your Mac.
-    ```BASH
+    ```
     $ pv target.img | sudo dd of=/dev/rdiskN bs=1m
     ```
 1. After this command finishes, you might get a warning pop up saying the disk
@@ -86,7 +86,7 @@ don't worry.
 1. Eject the disk by running the below command.  Replacing `N` again for the
 disk number.  If you clicked 'Eject' instead of 'Ignore' when the warning popped
 up, you can skip this step.
-    ```BASH
+    ```
     $ diskutil eject /dev/diskN
     ```
 1. That's it!  You can remove the USB stick and use to boot off on any other

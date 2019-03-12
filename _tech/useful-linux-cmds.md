@@ -17,12 +17,12 @@ full blow webserver.  There's different commands based on which version of
 python you're running.
 
 #### Python 3:
-```BASH
+```
 $ python -m http.server 8000
 ```
 
 #### Python 2:
-```BASH
+```
 $ python -m SimpleHTTPServer 8000
 ```
 
@@ -30,7 +30,7 @@ $ python -m SimpleHTTPServer 8000
 Useful if you quickly want to re-install an OS from PXE or CD, but don't want
 to muck around with changing the BIOS boot order.  Data will still be on the
 disk, but it just blows away the MBR.  Change `/dev/sda` to your boot disk.
-```BASH
+```
 $ sudo dd if=/dev/zero of=/dev/sda count=1 bs=512
 ```
 
@@ -99,7 +99,7 @@ I've used this multiple times with some boxes that have many interfaces.
 
 First run `lscpi` to make get the PCI address of all Ethernet interfaces.  The
 PCI address is the first part of the message, eg. "01:00.0"
-```BASH
+```
 # lspci | grep Ethernet
 02:00.0 Ethernet controller: Intel Corporation I350 Gigabit Network Connection (rev 01)
 02:00.1 Ethernet controller: Intel Corporation I350 Gigabit Network Connection (rev 01)
@@ -133,7 +133,7 @@ PCI address is the first part of the message, eg. "01:00.0"
 ```
 
 Next, run `dmesg` to show the interfaces and their PCI addresses:
-```BASH
+```
 # dmesg | grep 'renamed from' | egrep 'igb|i40e' | awk '{print $5, $4}' | sort
 enp12s0f0: 0000:0c:00.0
 enp12s0f1: 0000:0c:00.1
