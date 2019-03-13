@@ -3,6 +3,8 @@ layout: default
 title: "Git Hacks"
 ---
 
+Last Updated: 2019-03-13
+
 Git is by the far the de-facto standard for version control, but out of box it
 lacks a lot of tools that make it easier to work with.  I've built quite a
 range of aliases and separate scripts to help with every day use.  Here's a
@@ -116,4 +118,57 @@ master:
   Commit:    c1814782ddfcc5492ca9beff44801584313025b3
   Date:      2018-10-15 19:48:53
   Committer: Chris Pedro <chris@thepedros.com>
+```
+
+## Setting Up Multiple Remote Repos
+Normally, you'll only have one remote repo, but this may not always be the
+case. For example, I push all my personal public repos to GitHub and GitLab,
+because why keep all your eggs in one basket?  I could just use `git remote`
+commands to set up multiple remote repos, but I found it way easier to just
+edit the `.git/config` file in the repo itself.  Doing this also allows you to
+set two URLs for the 'origin' repo, which means anytime you push or pull to
+'origin', you'll be pushing or pulling to or from both URLs.  This means, for
+example, you simply do a `git push origin master` and have the repo synced up
+to all remote repos in one go.
+
+First, backup up your config in case anything goes wrong, then open
+`.git/config` using your favourite text editor, and add all the remote repos
+using the format below.  The `<REMOTE>` on the first and last line much match.
+```
+[remote "<REMOTE>"]
+	url = <REMOTE_URL>
+	fetch = +refs/heads/*:refs/remotes/<REMOTE>/*
+```
+
+Next, edit the `[remote "origin"]` directive and simply add the same `url =`
+line you did above.  You can specify as many URLs as you wish all will be used
+when doing a push.
+
+As an example, below is the config I use for this projects repo.  As you can
+see, I have a "GitHub" and "GitLab" remote repo named, and both URLs are under
+"origin".  Each time I run `git push origin master`, both remote repos are
+updated.  Also, I can pull or push to each individually by running `git pull
+GitHub master` or `git pull GitLab master` for example.  Also, running `git
+fetch --all` will run a 'fetch' on both remote repos.
+```
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[remote "origin"]
+	url = git@github.com:cpedro/cpedro.github.io.git
+	url = git@gitlab.com:cpedro/cpedro.github.io.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[remote "GitLab"]
+	url = git@gitlab.com:cpedro/cpedro.github.io.git
+	fetch = +refs/heads/*:refs/remotes/GitLab/*
+[remote "GitHub"]
+	url = git@github.com:cpedro/cpedro.github.io.git
+	fetch = +refs/heads/*:refs/remotes/GitHub/*
 ```
