@@ -21,8 +21,59 @@ $ sudo ifconfig vlan<X> inet <IP> netmask <netmask>
 $ sudo ifconfig vlan<X> up
 ```
 
-## Add Static Route
+## Remove VLAN Interface
 
 ```
-$ sudo route -n add -net <ip>/<prefix> <gw>
+$ sudo ifconfig vlan<X> destroy
 ```
+
+## Show Routes
+
+General routing table:
+```
+$ netstat -rn
+```
+
+Specific route:
+```
+$ route get <net|ip>[/<prefix>]
+```
+
+## Editing Static Routes
+
+### Adding
+
+Network route:
+```
+$ sudo route add -net <net>/<prefix> <gw>
+```
+
+Host route
+```
+$ sudo route add -host <ip> <gw>
+```
+
+### Changing
+
+Network route:
+```
+$ sudo route change -net <net>/<prefix> <new-gw>
+```
+
+Host route
+```
+$ sudo route change -host <ip> <new-gw>
+```
+
+### Removing
+
+Network route:
+```
+$ sudo route delete -net <net>/<prefix>
+```
+
+Host route
+```
+$ sudo route delete -host <ip>
+```
+
