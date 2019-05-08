@@ -50,6 +50,9 @@ $ sudo ethtool -s <int> autoneg on
 
 To see current settings and state:
 ```
+$ sudo ethtool <int>
+```
+```
 $ sudo ethtool enp2s0
 Settings for enp2s0:
 	Supported ports: [ TP ]
