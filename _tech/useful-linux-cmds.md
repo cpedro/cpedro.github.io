@@ -34,6 +34,49 @@ disk, but it just blows away the MBR.  Change `/dev/sda` to your boot disk.
 $ sudo dd if=/dev/zero of=/dev/sda count=1 bs=512
 ```
 
+## Hard-code Interface Speed and Duplex
+
+This comes in handy when connecting to some network devices that don't like to
+properly auto-negotiate.  If you're seeing you interface coming up at
+half-duplex, you can force the network to a certain setting.
+```
+$ sudo ethtool -s <int> speed <speed> duplex full autoneg off
+```
+
+To re-enable auto-negotiation:
+```
+$ sudo ethtool -s <int> autoneg on
+```
+
+To see current settings and state:
+```
+$ sudo ethtool enp2s0
+Settings for enp2s0:
+	Supported ports: [ TP ]
+	Supported link modes:   10baseT/Half 10baseT/Full
+	                        100baseT/Half 100baseT/Full
+	                        1000baseT/Full
+	Supported pause frame use: Symmetric
+	Supports auto-negotiation: Yes
+	Advertised link modes:  10baseT/Half 10baseT/Full
+	                        100baseT/Half 100baseT/Full
+	                        1000baseT/Full
+	Advertised pause frame use: Symmetric
+	Advertised auto-negotiation: Yes
+	Speed: 1000Mb/s
+	Duplex: Full
+	Port: Twisted Pair
+	PHYAD: 1
+	Transceiver: internal
+	Auto-negotiation: on
+	MDI-X: off (auto)
+	Supports Wake-on: pumbg
+	Wake-on: g
+	Current message level: 0x00000007 (7)
+			       drv probe link
+	Link detected: yes
+```
+
 ## Show Interface Error Counts
 Show the RX and TX errors on an interface in a nice readable format.  Change 
 `<int>` to be whatever interface you want to see stats for. Adapted from 
