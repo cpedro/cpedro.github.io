@@ -53,8 +53,8 @@ To see current settings and state:
 $ sudo ethtool <int>
 ```
 ```
-$ sudo ethtool enp2s0
-Settings for enp2s0:
+$ sudo ethtool enp0s20f3
+Settings for enp0s20f3:
 	Supported ports: [ TP ]
 	Supported link modes:   10baseT/Half 10baseT/Full
 	                        100baseT/Half 100baseT/Full
@@ -66,12 +66,36 @@ Settings for enp2s0:
 	                        1000baseT/Full
 	Advertised pause frame use: Symmetric
 	Advertised auto-negotiation: Yes
-	Speed: 1000Mb/s
-	Duplex: Full
+	Speed: 100Mb/s
+	Duplex: Half
 	Port: Twisted Pair
-	PHYAD: 1
+	PHYAD: 3
 	Transceiver: internal
 	Auto-negotiation: on
+	MDI-X: off (auto)
+	Supports Wake-on: pumbg
+	Wake-on: g
+	Current message level: 0x00000007 (7)
+			       drv probe link
+	Link detected: yes
+$ sudo ethtool -s enp0s20f3 speed 100 duplex full autoneg off
+$ sudo ethtool enp0s20f3
+Settings for enp0s20f3:
+	Supported ports: [ TP ]
+	Supported link modes:   10baseT/Half 10baseT/Full
+	                        100baseT/Half 100baseT/Full
+	                        1000baseT/Full
+	Supported pause frame use: Symmetric
+	Supports auto-negotiation: Yes
+	Advertised link modes:  Not reported
+	Advertised pause frame use: Symmetric
+	Advertised auto-negotiation: No
+	Speed: 100Mb/s
+	Duplex: Full
+	Port: Twisted Pair
+	PHYAD: 3
+	Transceiver: internal
+	Auto-negotiation: off
 	MDI-X: off (auto)
 	Supports Wake-on: pumbg
 	Wake-on: g
