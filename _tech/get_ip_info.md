@@ -10,7 +10,7 @@ This handy little Bash function comes by way of
 using the IP API from [ipinfo.io](https://ipinfo.io/). Although I had to do some
 tweaking to get it to work on MacOS, due to it using `dig`.  The issue I had was
 that when I just gave the function an IP, `dig` wouldn't return anything, and
-the function itself would give me IP informationfor my public IP.  To get around
+the function itself would give me information for my public IP.  To get around
 this, I had to check the input first to see if it was a valid IP.  For this I'm
 using another function `valid_ip()` from
 [a blog post](https://www.linuxjournal.com/content/validating-ip-address-bash-script)
@@ -41,7 +41,7 @@ function gii() {
 }
 ```
 
-The script also uses `jq` command that parses JSON.  To get this, you can
+The script also uses the `jq` command that parses JSON.  To get this, you can
 install it by running:
 
 ### MacOS:
