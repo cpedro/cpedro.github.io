@@ -3,6 +3,8 @@ layout: default
 title: "Useful macOS Commands"
 ---
 
+Last Updated: 2019-03-19
+
 Below is just a random dump of useful commands I use frequently, in no 
 particular order.
 

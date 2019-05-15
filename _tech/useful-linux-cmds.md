@@ -3,6 +3,8 @@ layout: default
 title: "Useful Linux Commands"
 ---
 
+Last Updated: 2019-05-08
+
 Below is just a random dump of useful commands I use frequently, in no 
 particular order.
 

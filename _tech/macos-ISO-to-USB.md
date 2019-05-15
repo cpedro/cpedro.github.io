@@ -3,6 +3,8 @@ layout: default
 title: "How to make bootable USB from an ISO on macsOS"
 ---
 
+Last Updated: 2019-03-11
+
 If you need to make a bootable USB stick from an ISO you've downloaded, it's
 actually fairly straightforward on a Mac.  I've used this to make various
 bootable installation stick, everything from Windows, Linux, VyOS and many
