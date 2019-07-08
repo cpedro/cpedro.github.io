@@ -1,5 +1,6 @@
 ---
 title: "Welcome to my little corner of the web!"
+layout: default
 ---
 
 In the past, I've never been much for "blogging" or anything like that.  But

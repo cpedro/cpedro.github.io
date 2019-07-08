@@ -1,6 +1,6 @@
 ---
-layout: default
 title: "Git Hacks"
+layout: default
 ---
 
 Last Updated: 2019-03-13

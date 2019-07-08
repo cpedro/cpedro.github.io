@@ -1,6 +1,6 @@
 ---
-layout: default
 title: "Geolocation Bash Function"
+layout: default
 ---
 
 Last Updated: 2019-05-15

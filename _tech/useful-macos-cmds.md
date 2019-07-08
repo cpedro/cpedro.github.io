@@ -1,6 +1,6 @@
 ---
-layout: default
 title: "Useful macOS Commands"
+layout: default
 ---
 
 Last Updated: 2019-03-19

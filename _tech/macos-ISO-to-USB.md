@@ -1,6 +1,6 @@
 ---
-layout: default
 title: "How to make bootable USB from an ISO on macsOS"
+layout: default
 ---
 
 Last Updated: 2019-03-11

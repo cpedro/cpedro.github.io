@@ -1,6 +1,6 @@
 ---
-layout: default
 title: "Filter XML Data to remove elements using Python"
+layout: default
 ---
 
 Last Updated: 2019-07-08
