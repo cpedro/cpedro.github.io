@@ -15,7 +15,7 @@ the information from.
 
 #### Documents (in no particular order)
 {% if site.tech.size > 0 %}
-{% for post in site.tech %}
+{% for post in site.tech reversed %}
 [{{ post.title | escape }}]({{ post.url | relative_url }})
 {% endfor %}
 {% endif %}
