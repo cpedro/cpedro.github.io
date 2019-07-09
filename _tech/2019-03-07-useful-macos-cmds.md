@@ -3,7 +3,7 @@ title: "Useful macOS Commands"
 layout: default
 ---
 
-Last Updated: 2019-03-19
+Last Updated: 2019-07-09
 
 Below is just a random dump of useful commands I use frequently, in no 
 particular order.
@@ -12,6 +12,17 @@ particular order.
 
 ```
 $ sudo killall -HUP mDNSResponder
+```
+
+## Find open TCP and UDP sockets
+
+```
+$ lsof -Pnl +M -i4
+```
+
+To find just TCP in LISTEN state
+```
+$ lsof -Pnl +M -i4 | grep LISTEN
 ```
 
 ## Add VLAN Interface

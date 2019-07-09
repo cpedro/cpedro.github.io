@@ -13,7 +13,7 @@ useful as well. Where I can and remember, I will link to sources that I gathered
 the information from.
 
 
-#### Documents (in no particular order)
+#### Documents
 {% if site.tech.size > 0 %}
 {% for post in site.tech reversed %}
 [{{ post.title | escape }}]({{ post.url | relative_url }})
