@@ -59,7 +59,7 @@ method will need to be used.
 ### Background
 
 I used this method for backing up [pfSense](https://www.pfsense.org/) firewall
-configus. The issue I had was I was using [RANCID](https://www.shrubbery.net/rancid/) 
+configs. The issue I had was I was using [RANCID](https://www.shrubbery.net/rancid/) 
 to keep a track of changes in configs.  However, we were using [Snort](https://www.snort.org/)
 on the firewalls, which was auto-updating rulesets.  Each time a rule set was
 updated, we would get something similar to below in from RANCID:
