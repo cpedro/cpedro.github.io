@@ -3,7 +3,7 @@ title: "Geolocation Bash Function"
 layout: default
 ---
 
-Last Updated: 2019-05-15
+Last Updated: 2019-08-27
 
 This handy little Bash function comes by way of
 [this Twitter thread](https://twitter.com/curioman2/status/1128320604833222656),
@@ -12,27 +12,16 @@ tweaking to get it to work on MacOS, due to it using `dig`.  The issue I had was
 that when I just gave the function an IP, `dig` wouldn't return anything, and
 the function itself would give me information for my public IP.  To get around
 this, I had to check the input first to see if it was a valid IP.  For this I'm
-using another function `valid_ip()` from
-[a blog post](https://www.linuxjournal.com/content/validating-ip-address-bash-script)
-from [Mitch Frazier](https://www.linuxjournal.com/users/mitch-frazier).
+using another function `valid_ip()` with a regex
+[found here](https://helloacm.com/how-to-valid-ipv6-addresses-using-bash-and-regex/)
+to check first for a valid IPv4 or IPv6 IP.
 
 Here is the resulting code, which I've put in my `.bash_profile`.
 
 ```sh
 function valid_ip() {
-  local ip=$1
-  local stat=1
-
-  if [[ $ip =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$ ]]; then
-    OIFS=$IFS
-    IFS='.'
-    ip=($ip)
-    IFS=$OIFS
-    [[ ${ip[0]} -le 255 && ${ip[1]} -le 255 \
-      && ${ip[2]} -le 255 && ${ip[3]} -le 255 ]]
-    stat=$?
-  fi
-  return $stat
+  [[ $1 =~ ^([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])\.([0-9]{1,2}|1[0-9][0-9]|2[0-4][0-9]|25[0-5])$ || $1 =~ ^(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))$ ]]
+  return $?
 }
 
 function gii() {
