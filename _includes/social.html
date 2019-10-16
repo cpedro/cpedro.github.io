@@ -2,7 +2,7 @@
 {% if site.social %}
   <div class="right-align">
     {% for link in site.social.links %}
-      <a class="button-socicon" href="{{ link.url }}" title="{{ link.title }}">
+      <a class="button-socicon" href="{{ link.url }}" title="{{ link.title }}" target="_blank" rel="nofollow noopener noreferrer">
         <span class="{{ link.icon }}"></span>
       </a>
     {% endfor %}
