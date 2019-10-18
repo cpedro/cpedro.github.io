@@ -3,7 +3,7 @@ title: "How to make bootable USB from an ISO on macsOS"
 layout: default
 ---
 
-Last Updated: 2019-03-11
+Last Updated: 2019-10-18
 
 If you need to make a bootable USB stick from an ISO you've downloaded, it's
 actually fairly straightforward on a Mac.  I've used this to make various
@@ -78,8 +78,13 @@ USB stick.
 downloaded ISO file.  Make sure you do this on the right disk, or you **risk
 wiping the wrong device**.  Again, replace `N` with your disk number.  You'll be
 prompted for a password, just enter the password you use to log onto your Mac.
+(If you don't have `pv`, you can install it with [Homebrew](https://brew.sh/))
     ```
     $ pv target.img | sudo dd of=/dev/rdiskN bs=1m
+    ```
+    **OR without `pv` (You won't see progress)**
+    ```
+    $ sudo dd if=target.img of=/dev/rdiskN bs=1m
     ```
 1. After this command finishes, you might get a warning pop up saying the disk
 inserted was not readable by this computer.  You can click 'Ignore'.  It just
