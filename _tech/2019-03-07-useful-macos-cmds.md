@@ -3,10 +3,22 @@ title: "Useful macOS Commands"
 layout: default
 ---
 
-Last Updated: 2019-07-09
+Last Updated: 2019-10-22
 
 Below is just a random dump of useful commands I use frequently, in no 
 particular order.
+
+## Fix zsh warning in Catalina
+
+Since macOS Catalina, the default shell has been changed from bash to zsh. If
+like me, you still prefer bash and use it as your shell, you'll get the warning
+"default interactive shell is now zsh" each time you log into a terminal.  To
+silence this, you can put `BASH_SILENCE_DEPRECATION_WARNING=1` in your
+`.bash_profile`. [Source](https://www.addictivetips.com/mac-os/hide-default-interactive-shell-is-now-zsh-in-terminal-on-macos/)
+
+```
+$ echo 'export BASH_SILENCE_DEPRECATION_WARNING=1' >> ~/.bash_profile
+```
 
 ## Flush Local DNS
 
