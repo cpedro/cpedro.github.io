@@ -3,6 +3,13 @@
 
 @import "{{ site.theme }}";
 
+body {
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  color: #6d6d6d;
+}
+
 header h1 {
   margin: 0 0 0 0px;
 }
