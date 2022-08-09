@@ -6,7 +6,7 @@
 body {
   line-height: 1.6;
   font-family: Nunito, sans-serif;
-  font-size: 1rem;
+  font-size: 1em;
   color: #6d6d6d;
 }
 
@@ -19,13 +19,13 @@ header h1:before {
 }
 
 footer {
-  font-size: 10px;
+  font-size: 0.75em;
   text-align: right;
 }
 
 code, pre {
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
-  font-size: 12px;
+  font-size: 1em;
 }
 
 div.right-align {
