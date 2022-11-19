@@ -36,7 +36,7 @@ social:
       url: "https://www.linkedin.com/in/chris-pedro-3317a023/"
       icon: "socicon-linkedin"
     - title: "Mastodon"
-      url: "https://mastodon.social/@Aner"
+      url: "https://fosstodon.org/@aner"
       icon: "socicon-mastodon"
     - title: "Twitter"
       url: "https://twitter.com/Aner_san"
