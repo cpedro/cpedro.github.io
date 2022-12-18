@@ -3,36 +3,6 @@
 
 @import "{{ site.theme }}";
 
-body {
-  line-height: 1.6;
-  font-family: Nunito, sans-serif;
-  font-size: 1.1em;
-  color: #6d6d6d;
-}
-
-.inner {
-  width: 800px;
-  margin: 0 auto;
-}
-
-header h1 {
-  margin: 0 0 0 0px;
-}
-
-header h1:before {
-  content: "";
-}
-
-footer {
-  font-size: 0.75em;
-  text-align: right;
-}
-
-code, pre {
-  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal;
-  font-size: 1em;
-}
-
 div.right-align {
   text-align: right;
   margin-left: auto;
