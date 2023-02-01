@@ -10,7 +10,7 @@ Last Updated: 2021-10-07
 This is actually a mirror from a blog post done by Thomas Martin I/O.  I have
 personally referred to this multiple times while configuring Salt states in
 Jinja.  When I recently went back to refer to, I found that the blog no longer
-exists and the domain itself has been abnadoned.  Luckily, I found a copy of it
+exists and the domain itself has been abandoned.  Luckily, I found a copy of it
 on [Wayback Machine](https://web.archive.org/web/20180814194012/http://www.tmartin.io:80/articles/2014/salt-improving-jinja-usage)
 so I decided to make my own mirror.  Enjoy.
 
