@@ -19,7 +19,7 @@ is a powerful tool, and figuring out how to do it in xonsh is a bit tricky, but
 below is the easiest way I've figured out how to do it.
 
 Example:
-```
+```python
 > for i in ['hello', 'world']:
 >     $[echo @(i)]
 >
@@ -28,7 +28,7 @@ world
 ```
 
 Can be written as:
-```
+```python
 > [$[echo @(i)] for i in ['hello', 'world']]
 hello
 world
@@ -39,7 +39,7 @@ The only downside with this after the commands are written, an array with `None`
 is printed at the end of execution, this is because of how uncaptured
 subprocesses are handled in xonsh.  To get around this, you can just assign the
 list comprehension to a variable.
-```
+```python
 > x = [$[echo @(i)] for i in ['hello', 'world']]
 hello
 world
