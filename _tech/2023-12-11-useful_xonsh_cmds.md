@@ -12,7 +12,7 @@ trying to figure out how to use things like Python list comprehension in xonsh.
 
 Below is a list of useful things I've figured out how to do along the way.
 
-## Loop through Directory
+## Loop Through Directory
 
 A common thing that I tend to do in Bash is loop through directories or files in
 the current directory to perform some tasks on them.  For example (in Bash):
@@ -20,16 +20,16 @@ the current directory to perform some tasks on them.  For example (in Bash):
 for i in */
 do
   cd $i
-  git pull origin master
+  git pull origin main
   cd ../
 done
 ```
 
-The same can be done from xonsh by using the path string (p) and globbing (g):
+The same can be done from xonsh by using the path string, `p` and globbing, `g`:
 ```python
 for i in pg`*`:
     cd @(i)
-    git pull origin master
+    git pull origin main
     cd ../
 ```
 
@@ -38,7 +38,7 @@ Or if you need to ensure that `i` is a directory, you can add additional logic:
 for i in pg`*`:
     if i.is_dir():
         cd @(i)
-        git pull origin master
+        git pull origin main
         cd ../
 ```
 
