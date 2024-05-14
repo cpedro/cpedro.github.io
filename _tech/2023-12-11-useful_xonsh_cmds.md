@@ -3,7 +3,7 @@ title: "Useful xonsh Commands"
 layout: default
 ---
 
-Last Updated: 2024-01-02
+Last Updated: 2024-05-04
 
 I've recently started using [xonsh](https://xon.sh/) as a Linux shell.  It's
 extremely powerful Python-based shell.  However, as the days go one, I'm trying
@@ -42,6 +42,17 @@ for i in pg`*`:
         cd ../
 ```
 
+## Loop through command output
+
+Another common task is to run a command and loop through the output of it to do
+something else.  For example (I know this can be done from `find`), if I want
+to find all `requirements.txt` files in the current directory and run `pip3`
+to install them, you can use captured subproccess with `$()` and `split()`:
+```python
+for i in $(find . -name requirements.txt).split():
+    pip3 install -r @(i)
+```
+
 ## List Comprehension
 
 [Python List Comprehension](https://www.w3schools.com/python/python_lists_comprehension.asp)
@@ -51,7 +62,7 @@ below is the easiest way I've figured out how to do it.
 Example:
 ```python
 > for i in ['hello', 'world']:
->     $[echo @(i)]
+>     echo @(i)
 >
 hello
 world
@@ -73,5 +84,10 @@ comprehension to a variable.
 > x = [$[echo @(i)] for i in ['hello', 'world']]
 hello
 world
+```
+
+If you want to loop through the output of a command though, use the following:
+```python
+> [$[pip3 install -r @(i)] for i in $(find . -name requirements.txt).split()]
 ```
 
